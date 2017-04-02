@@ -57,7 +57,22 @@ class treadmill extends Plugin {
     }
 
     public function siteBodyBegin() {
-        return $this->get();
+        // return $this->get();
+    }
+    public function siteBodyEnd() {
+        // return $this->get();
+    }
+    public function pageBegin() {
+        // return $this->get();
+    }
+    public function pageEnd() {
+        // return $this->get();
+    }
+    public function postBegin() {
+        // return $this->get();
+    }
+    public function postEnd() {
+        // return $this->get();
     }
 }
 
