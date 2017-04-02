@@ -1,0 +1,9 @@
+{
+	"plugin-data":
+	{
+		"name": "treadmill",
+		"description": "adds a scrolling text (siteBodyBegin)"
+	},
+    "scroll-text": "Text to scroll",
+    "duration-text": "Duration of animation in seconds"
+}

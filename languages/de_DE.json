@@ -1,0 +1,9 @@
+{
+	"plugin-data":
+	{
+		"name": "Laufband",
+		"description": "lässt einen Text über den Bildschrim laufen (siteBodyBegin)"
+	},
+    "scroll-text": "Lauftext",
+    "duration-text": "Dauer der Animation in Sekunden"
+}
