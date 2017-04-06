@@ -31,7 +31,7 @@ class treadmill extends Plugin {
         $html .= '</style>';
         $html .= '';
         $html .= '<p class="scrollText">';
-        $html .= $this->getDbField('text');
+        $html .= str_replace( PHP_EOL, ' &emsp; ', $this->getDbField('text'));
         $html .= '</p>';
 
         return $html;
