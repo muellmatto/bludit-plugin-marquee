@@ -7,14 +7,16 @@ class treadmill extends Plugin {
             'text'=>'',
             'duration'=>'25'
         );
+        // make $treadmill object available in themes
+        global $treadmill;
+        $treadmill = $this;
     }
 
     public function get() {
-
+        // returns treadmill html code
         $html =  '<style>';
         $html .= '.scrollText {';
         $html .= ' padding-left: 100%; ';
-        // $html .= ' animation: scrolly 4s linear infinite;';
         $html .= ' animation-name: scrolly;';
         $html .= ' animation-duration:';
         $html .= $this->getDbField('duration');
@@ -35,7 +37,6 @@ class treadmill extends Plugin {
         $html .= '</p>';
 
         return $html;
-    
     }
 
     public function form() {
@@ -54,25 +55,6 @@ class treadmill extends Plugin {
         $html .= '</div>';
 
         return $html;
-    }
-
-    public function siteBodyBegin() {
-        // return $this->get();
-    }
-    public function siteBodyEnd() {
-        // return $this->get();
-    }
-    public function pageBegin() {
-        // return $this->get();
-    }
-    public function pageEnd() {
-        // return $this->get();
-    }
-    public function postBegin() {
-        // return $this->get();
-    }
-    public function postEnd() {
-        // return $this->get();
     }
 }
 
