@@ -19,7 +19,7 @@ class treadmill extends Plugin {
         $html .= ' padding-left: 100%; ';
         $html .= ' animation-name: scrolly;';
         $html .= ' animation-duration:';
-        $html .= $this->getDbField('duration');
+        $html .= $this->getValue('duration');
         $html .= 's;';
         $html .= ' animation-timing-function: linear;';
         $html .= ' animation-iteration-count: infinite;';
@@ -33,7 +33,7 @@ class treadmill extends Plugin {
         $html .= '</style>';
         $html .= '';
         $html .= '<p class="scrollText">';
-        $html .= str_replace( PHP_EOL, ' &emsp; ', $this->getDbField('text'));
+        $html .= str_replace( PHP_EOL, ' &emsp; ', $this->getValue('text'));
         $html .= '</p>';
 
         return $html;
@@ -41,16 +41,16 @@ class treadmill extends Plugin {
 
     public function form() {
         
-		global $Language;
+		global $L;
 
         $html = '<div>';
-        $html .= '<label>'.$Language->get('scroll-text').'</label>';
-        $html .= '<textarea name="text" id="jstext">'.$this->getDbField('text').'</textarea>';
+        $html .= '<label>'.$L->get('scroll-text').'</label>';
+        $html .= '<textarea name="text" id="jstext">'.$this->getValue('text').'</textarea>';
         $html .= '</div>';
         $html .= '<div>';
-        $html .= '<label>'.$Language->get('duration-text').'</label>';
+        $html .= '<label>'.$L->get('duration-text').'</label>';
         $html .= '<input type="number" name="duration" min="1" value="';
-        $html .= $this->getDbField('duration');
+        $html .= $this->getValue('duration');
         $html .= '">';
         $html .= '</div>';
 

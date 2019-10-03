@@ -3,8 +3,8 @@
 	"email": "matto@damniam.de",
 	"website": "",
 	"version": "1.5.2",
-	"releaseDate": "2017-04-02",
+	"releaseDate": "2019-10-03",
 	"license": "GPL",
-	"compatible": "1.5.2",
+	"compatible": "3.9.2",
 	"notes": ""
 }
